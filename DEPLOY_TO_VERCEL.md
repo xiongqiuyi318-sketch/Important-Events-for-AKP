@@ -21,7 +21,14 @@
    - 在 "Import Git Repository" 中找到你的仓库
    - 点击 "Import" 按钮
 
-3. **配置项目设置**
+3. **配置项目名称** ⚠️ 重要！
+   - 在 "Project Name" 字段输入：`important-events-for-akp`
+   - **必须全小写**，使用连字符 `-` 分隔单词
+   - 不能包含大写字母、空格或特殊字符
+   - 不能包含连续三个连字符 `---`
+   - 参考：[项目名称问题解决方案](./VERCEL_PROJECT_NAME_FIX.md)
+
+4. **配置项目设置**
    - **Framework Preset**: 选择 "Other" 或保持默认
    - **Root Directory**: 留空（使用根目录）
    - **Build Command**: 已通过 `vercel.json` 自动配置为 `pnpm install && pnpm build:h5`
@@ -107,6 +114,16 @@ vercel --prod
 - `rewrites`: 重写规则，同样支持前端路由回退
 
 ## 🐛 常见问题排查
+
+### 问题 0: 项目名称不符合要求 ⚠️
+
+**错误信息**: Project names can be up to 100 characters long and must be lowercase...
+
+**解决方案**:
+1. 项目名称必须全小写
+2. 使用连字符 `-` 分隔单词，例如：`important-events-for-akp`
+3. 不能包含大写字母、空格或特殊字符
+4. 详细解决方案请查看：[VERCEL_PROJECT_NAME_FIX.md](./VERCEL_PROJECT_NAME_FIX.md)
 
 ### 问题 1: 构建失败
 
