@@ -1,0 +1,18 @@
+{
+  "buildCommand": "pnpm install && pnpm build:h5",
+  "outputDirectory": "dist",
+  "installCommand": "pnpm install",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+
